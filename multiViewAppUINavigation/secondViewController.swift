@@ -9,10 +9,15 @@ import UIKit
 
 class secondViewController: UIViewController {
 
+    @IBOutlet weak var sliderValue: UISlider!
+    @IBOutlet weak var switchLabel: UILabel!
+    
+    var selectedSwitchState = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Second"
-        // Do any additional setup after loading the view.
+        switchLabel.text = selectedSwitchState ? "ON": "OFF"
     }
     
 

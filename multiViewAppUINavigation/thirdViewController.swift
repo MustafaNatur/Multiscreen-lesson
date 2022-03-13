@@ -9,6 +9,8 @@ import UIKit
 
 class thirdViewController: UIViewController {
 
+    @IBOutlet weak var sliderLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Third"
