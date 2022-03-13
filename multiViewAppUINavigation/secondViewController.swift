@@ -18,17 +18,22 @@ class secondViewController: UIViewController {
         super.viewDidLoad()
         title = "Second"
         switchLabel.text = selectedSwitchState ? "ON": "OFF"
+        sliderValue.maximumValue = 0
+        sliderValue.maximumValue = 100
+        sliderValue.value = 20
     }
     
 
-    /*
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "secondSegue" {
+            if let thirdViewControllerCtr = segue.destination as? thirdViewController {
+                thirdViewControllerCtr.labelSlider = Int(sliderValue.value)
+            }
+        }
     }
-    */
+
 
 }
